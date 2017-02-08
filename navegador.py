@@ -1,5 +1,5 @@
 class Navegador(object):
-	def __init__(self, nombre, version, tabs, nombres):
+	def __init__(self, nombre, version):
 		self.nombre = nombre
 		self.version = version
 		self.tabs = []

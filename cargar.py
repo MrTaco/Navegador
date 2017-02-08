@@ -1,10 +1,11 @@
 from navegador import Navegador
 from Tabs import Tab
-nave = Navegador(nombre, version, tabs, nombres) 
+nave = Navegador("Navegador_Pirta", "9.11") 
 print ("Bienvenido \n")
-print("1. Crear Nuevo Tab\n2. Cambiar Url y Tab\n3. Cerrar Tab\n4. Cerrar todos los tabs\n5. Mostar mis Tabs\n6. Guardar mis Tabs\n7. Salir\n")
-opcion=int (input(": "))
-if opcion!= 7:
+opcion = None
+while opcion!= 7:
+	print("1. Crear Nuevo Tab\n2. Cambiar Url y Tab\n3. Cerrar Tab\n4. Cerrar todos los tabs\n5. Mostar mis Tabs\n6. Guardar mis Tabs\n7. Salir\n")
+	opcion=int (input(": "))
 	if opcion == 1:
 		nombre = input("Ingrese Nombre: ")
 		url = input ("Ingrese URL: ")
@@ -26,4 +27,5 @@ if opcion!= 7:
 		doc = open("tabs.txt", "w")
 		for i in range(len(nombre)):
 			print(i + ") " + nombres[i] + " " + tabs[i])
-print "-----------------------------------"
+		doc.close()
+print( "-----------------------------------")
